@@ -2,7 +2,7 @@ from tkinter import *
 from tkinter import messagebox
 import random
 import time
-L= ["Apple","Lemon","Banana","Melon","Ananas","Kiwi","Orange","Cherry","Citron","papaya"]
+L= ["Apple","Lemon","Banana","Melon","Ananas","Kiwi","Orange","Cherry","Citron","Papaya"]
 L_length = len(L)
 game_end = 0
 dict_cards = {}
