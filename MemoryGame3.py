@@ -2,7 +2,7 @@ from tkinter import *
 from tkinter import messagebox
 import random
 import time
-L= ["Apple","Lemon","Banana","Melon","Ananas","Kiwi","Orange","Cherry","Citron","papaya"]
+L= ["Apple","Lemon","Banana","Melon","Ananas","Kiwi","Orange","Cherry","Citron","Papaya"]
 L_length = len(L)
 game_end = 0
 dict_cards = {}
@@ -111,6 +111,33 @@ dict_cards[bt19] = ""
 bt20 = Button(f5,font=(fonts),width="5",height="3",command=lambda:bttn_clicked(bt20),bg="lightpink")
 bt20.grid(row=1,column=3,padx=20, pady=40)
 dict_cards[bt20] = ""
+
+def center_window(window):
+    window.update_idletasks()
+    x = (window.winfo_screenwidth() - window.winfo_reqwidth()) / 2
+    y = (window.winfo_screenheight() - window.winfo_reqheight()) / 2
+    window.geometry("+%d+%d" % (x, y))
+def show_popup():
+    game.withdraw()  
+    popup = Toplevel(game)
+    popup.title("Welcome to Memory Game")
+    label = Label(popup, text="Welcome to the Memory Game!\nClick 'Start Game' to begin.")
+    label.pack(padx=10, pady=10)
+    start_button = Button(popup, text="Start Game", command=lambda: [popup.destroy(), start_game()])
+    start_button.pack(pady=10)
+    center_window(popup)
+    popup.protocol("WM_DELETE_WINDOW", lambda: [popup.destroy(), game.deiconify()])  
+    popup.focus_force()
+
+
+def start_game():
+    random_text()
+    game.after(100, game.deiconify)  
+
+
+
+show_popup()
+
 
 def random_text():
     
