@@ -15,7 +15,7 @@ game = Tk()
 game.resizable(0,0)
 game.title("Memory Game")
 
-f1 = Frame(game,bg='violet')
+f1 = Frame(game,bg='#AC87C5')
 f1.pack()
 
 fonts = ['Helvetica', '15', 'bold']
@@ -36,7 +36,7 @@ bt4 = Button(f1,font=(fonts),width="5",height="3",command=lambda:bttn_clicked(bt
 bt4.grid(row=0,column=3,padx=20, pady=40)
 dict_cards[bt4] = ""
 
-f2 = Frame(game,bg='violet')
+f2 = Frame(game,bg='#756AB6')
 f2.pack()
 
 bt5 = Button(f2,font=(fonts),width="5",height="3",command=lambda:bttn_clicked(bt5),bg="lightpink")
@@ -55,7 +55,7 @@ bt8 = Button(f2,font=(fonts),width="5",height="3",command=lambda:bttn_clicked(bt
 bt8.grid(row=1,column=3,padx=20, pady=40)
 dict_cards[bt8] = ""
 
-f3 = Frame(game,bg='violet')
+f3 = Frame(game,bg='#AC87C5')
 f3.pack()
 
 bt9 = Button(f3,font=(fonts),width="5",height="3",command=lambda:bttn_clicked(bt9),bg="lightpink")
@@ -74,7 +74,7 @@ bt12 = Button(f3,font=(fonts),width="5",height="3",command=lambda:bttn_clicked(b
 bt12.grid(row=1,column=3,padx=20, pady=40)
 dict_cards[bt12] = ""
 
-f4 = Frame(game,bg='violet')
+f4 = Frame(game,bg='#756AB6')
 f4.pack()
 
 bt13 = Button(f4,font=(fonts),width="5",height="3",command=lambda:bttn_clicked(bt13),bg="lightpink")
