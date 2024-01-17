@@ -111,12 +111,13 @@ dict_cards[bt19] = ""
 bt20 = Button(f5,font=(fonts),width="5",height="3",command=lambda:bttn_clicked(bt20),bg="lightpink")
 bt20.grid(row=1,column=3,padx=20, pady=40)
 dict_cards[bt20] = ""
-
+#hadi khassa bdik pop up bach tji fcenter
 def center_window(window):
     window.update_idletasks()
     x = (window.winfo_screenwidth() - window.winfo_reqwidth()) / 2
     y = (window.winfo_screenheight() - window.winfo_reqheight()) / 2
-    window.geometry("+%d+%d" % (x, y))
+    window.geometry("+%d+%d" % (x, y)) #nefss tari9a li fel te7t li tekhedmat nit 
+#hadi hiya l pop up o chnu mektob fiha
 def show_popup():
     game.withdraw()  
     popup = Toplevel(game)
@@ -125,18 +126,20 @@ def show_popup():
     label.pack(padx=10, pady=10)
     start_button = Button(popup, text="Start Game", command=lambda: [popup.destroy(), start_game()])
     start_button.pack(pady=10)
+    #hado bach tji fop l window dyal game 7it kant katji f te7t
     center_window(popup)
+    #bach t7iyed l popup bla mat7iyed l window del game tahiya [ch7al dabzt m3aha]
     popup.protocol("WM_DELETE_WINDOW", lambda: [popup.destroy(), game.deiconify()])  
-    popup.focus_force()
+    popup.focus_force() 
 
-
+#bach tkhdem button dyal start d popup
 def start_game():
     random_text()
     game.after(100, game.deiconify)  
 
 
 
-show_popup()
+show_popup() #bach tle3 f lowl kolchi
 
 
 def random_text():
