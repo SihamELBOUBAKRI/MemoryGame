@@ -2,7 +2,7 @@ from tkinter import *
 from tkinter import messagebox
 import random
 import time
-L= ["Apple","Lemon","Banana","Melon","Ananas","Kiwi","Orange","Cherry"]
+L= ["Apple","Lemon","Banana","Melon","Ananas","Kiwi","Orange","Cherry","Citron","papaya"]
 L_length = len(L)
 game_end = 0
 dict_cards = {}
@@ -18,7 +18,7 @@ game.title("Memory Game")
 f1 = Frame(game,bg='#AC87C5')
 f1.pack()
 
-fonts = ['Helvetica', '15', 'bold']
+fonts = ['Helvetica', '10', 'bold']
 
 bt1 = Button(f1,font=(fonts),width="5",height="3",command=lambda:bttn_clicked(bt1),bg="lightpink")
 bt1.grid(row=0,column=0,padx=20, pady=40)
@@ -93,9 +93,28 @@ bt16 = Button(f4,font=(fonts),width="5",height="3",command=lambda:bttn_clicked(b
 bt16.grid(row=1,column=3,padx=20, pady=40)
 dict_cards[bt16] = ""
 
+f5 = Frame(game,bg='#AC87C5')
+f5.pack()
+
+bt17 = Button(f5,font=(fonts),width="5",height="3",command=lambda:bttn_clicked(bt17),bg="lightpink")
+bt17.grid(row=1,column=0,padx=20, pady=40)
+dict_cards[bt17] = ""
+
+bt18 = Button(f5,font=(fonts),width="5",height="3",command=lambda:bttn_clicked(bt18),bg="lightpink")
+bt18.grid(row=1,column=1,padx=20, pady=40)
+dict_cards[bt18] = ""
+
+bt19 = Button(f5,font=(fonts),width="5",height="3",command=lambda:bttn_clicked(bt19),bg="lightpink")
+bt19.grid(row=1,column=2,padx=20, pady=40)
+dict_cards[bt19] = ""
+
+bt20 = Button(f5,font=(fonts),width="5",height="3",command=lambda:bttn_clicked(bt20),bg="lightpink")
+bt20.grid(row=1,column=3,padx=20, pady=40)
+dict_cards[bt20] = ""
+
 def random_text():
     
-    occurances = {"Apple":0,"Lemon":0,"Banana":0,"Melon":0,"Ananas":0,"Kiwi":0,"Orange":0,"Cherry":0}
+    occurances = {"Apple":0,"Lemon":0,"Banana":0,"Melon":0,"Ananas":0,"Kiwi":0,"Orange":0,"Cherry":0,"Citron":0,"Papaya":0}
     
     for bttn in dict_cards:
         
