@@ -17,7 +17,7 @@ game.title("Memory Game")
 f1 = Frame(game)
 f1.pack()
 
-fonts = ['Helvetica', '20', 'bold']
+fonts = ['Helvetica', '15', 'bold']
 
 bt1 = Button(f1,font=(fonts),width="5",height="3",command=lambda:bttn_clicked(bt1))
 bt1.grid(row=0,column=0,padx=20, pady=40)
