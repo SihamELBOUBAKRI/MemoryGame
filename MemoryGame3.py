@@ -7,8 +7,8 @@ L_length = len(L)
 game_end = 0
 dict_cards = {}
 clicked_cards = 0
-fst_ = ""
-scnd_ = ""
+firstcard = ""
+secondcard = ""
 start = time.time()
 
 game = Tk()
